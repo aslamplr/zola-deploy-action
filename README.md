@@ -29,6 +29,7 @@ jobs:
         PAGES_BRANCH: gh-pages
         BUILD_DIR: docs
         BUILD_FLAGS: --drafts
+        DEPLOYMENT_REPOSITORY: aslamplr/aslamplr.github.io
         TOKEN: ${{ secrets.TOKEN }}
 ```
 
