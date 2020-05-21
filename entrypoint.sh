@@ -6,6 +6,10 @@ if [[ -n "$TOKEN" ]]; then
     GITHUB_TOKEN=$TOKEN
 fi
 
+if [[ -n "$DEPLOYMENT_REPOSITORY" ]]; then
+    GITHUB_REPOSITORY=$DEPLOYMENT_REPOSITORY
+fi
+
 if [[ -z "$PAGES_BRANCH" ]]; then
     PAGES_BRANCH="gh-pages"
 fi
