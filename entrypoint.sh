@@ -47,6 +47,11 @@ main() {
     
     echo Building with flags: ${BUILD_FLAGS:+"$BUILD_FLAGS"}
     zola build ${BUILD_FLAGS:+"$BUILD_FLAGS"}
+    
+    if [[ -n "$DRAFTS_OUTPUT_DIR" ]]; then
+        # Build for drafts in public/drafts
+        zola build --drafts --output-dir $DRAFTS_OUTPUT_DIR --base-url $DRAFTS_BASE_URL
+    fi
 
     echo "Pushing artifacts to ${GITHUB_REPOSITORY}:$remote_branch"
 
